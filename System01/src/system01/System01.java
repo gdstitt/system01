@@ -5,6 +5,8 @@
  */
 package system01;
 
+import java.util.Properties;
+
 /**
  *
  * @author Greg
@@ -16,6 +18,11 @@ public class System01 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        Properties p = new Properties(System.getProperties());
+        
+        for(int count = 0; count < p.size(); count++) {
+            System.out.println("Value number " + (count + 1));
+        }
     }
     
 }
