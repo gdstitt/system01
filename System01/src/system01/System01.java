@@ -41,11 +41,18 @@ public class System01 {
         switch (ls.length()) {
             case 1: 
                 System.out.println("Unix system");
+                if (ls.contains( "\n")) {
+                    System.out.println("Line separator is \"\\n\"");
+                } else {
+                    System.out.println("The line separator has unexpected contents");
+                }
                 break;
             case 2:
                 System.out.println("Windows System");
                 if (ls.contains( "\r\n")) {
                     System.out.println("Line separator is \"\\r\\n\"");
+                } else {
+                    System.out.println("The line separator has unexpected contents");
                 }
                 break;
             default:
