@@ -35,7 +35,23 @@ public class System01 {
                 "the constructor's calling of System.getProperties()\n");
         p.list(System.out);
         
-        System.out.println("The System line separator length is: "+ System.lineSeparator().length());
+        
+        String ls = System.lineSeparator();
+        System.out.println("The System line separator length is: "+ ls.length());
+        switch (ls.length()) {
+            case 1: 
+                System.out.println("Unix system");
+                break;
+            case 2:
+                System.out.println("Windows System");
+                if (ls.contains( "\r\n")) {
+                    System.out.println("Line separator is \"\\r\\n\"");
+                }
+                break;
+            default:
+                System.out.println("Ooops - I haven't got that right!");
+        }
+        
     }
     
 }
