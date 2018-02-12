@@ -59,6 +59,10 @@ public class System01 {
                 System.out.println("Ooops - I haven't got that right!");
         }
         
+        
+        String userName = p.getProperty("");
+        System.out.println("The username is: " + userName);
+        
     }
     
 }
