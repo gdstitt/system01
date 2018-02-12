@@ -30,10 +30,12 @@ public class System01 {
         }
         
         
-        System.out.println("\n\n\nNOTE: even though the size() function returns zero for p," +
-                " the list() function\nwill return properties provided as defaults by " +
+        System.out.println("\n\n\nNOTE: even though the size() function returns zero for p,\n" +
+                "the list() function will return properties provided as defaults by\n" +
                 "the constructor's calling of System.getProperties()\n");
         p.list(System.out);
+        
+        System.out.println("The System line separator length is: "+ System.lineSeparator().length());
     }
     
 }
